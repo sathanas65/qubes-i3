@@ -1,0 +1,33 @@
+[CAPS]
+command=~/.config/i3blocks/caps/caps.sh
+signal=11
+color=#db200f
+
+#use below format to add space between blocks
+#[SPACE]
+#full_text="                                 "
+#color=#bf00ff
+
+[DISK]
+command=sudo lvs --noheadings -o data_percent qubes_dom0/vm-pool | awk '{ printf(" 💾 pool %s%% \n", $1) }'
+interval=300
+color=#00B4EB
+
+[CPU]
+full_text= 🔥 0.00% @ +00.0°C 
+command=~/.config/i3blocks/cpu/cpu_qubes.sh
+interval=5
+color=#bf00ff
+
+[MEM]
+command=sudo xl info | awk '/^total_memory/{t=$3} /^free_memory/{f=$3} END{printf(" 🐏 %.1fG/%.1fG \n",(t-f)/1024,t/1024)}'
+interval=5
+color=#FEC925
+
+[TIME_DATE]
+command=date +" %a, %d %b - %H:%M:%S"
+interval=15
+
+[TIME_DATE]
+command=date +" %a, %d %b - %H:%M:%S"
+interval=15

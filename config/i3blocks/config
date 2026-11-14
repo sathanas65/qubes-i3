@@ -27,7 +27,3 @@ color=#FEC925
 [TIME_DATE]
 command=date +" %a, %d %b - %H:%M:%S"
 interval=15
-
-[TIME_DATE]
-command=date +" %a, %d %b - %H:%M:%S"
-interval=15
